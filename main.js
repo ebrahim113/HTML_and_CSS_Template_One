@@ -9,7 +9,7 @@ const middleBar = bars.querySelector(':nth-child(2)');
 let isOpened = false;
 
 nav.addEventListener('click', (e) => {
-	e.stopPropagation();
+	e.stopPropagation()
 	if (isOpened) {
 		menu.style.display = 'none';
 		middleBar.style.width = '60%';

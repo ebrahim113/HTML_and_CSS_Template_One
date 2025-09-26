@@ -94,6 +94,10 @@ header .container nav .bars div:nth-of-type(2) {
 	width: 60%;
 }
 
+header .container nav:hover div:nth-of-type(2) {
+	width: 100% !important;
+}
+
 header .container nav ul::before {
 	content: "";
 	position: absolute;
