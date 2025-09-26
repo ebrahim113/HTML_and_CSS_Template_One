@@ -1,6 +1,8 @@
 /* Start variables */
 :root {
+	--main-color: #10cab7;
 	--main-duration: .5s;
+	--paragraph-line-height: 1.8;
 }
 /* End variables */
 
@@ -139,3 +141,33 @@ header .container nav ul li:not(:last-child) a {
 	border-bottom: 1px solid #ddd;
 }
 /* End header */
+
+/* Start landing */
+.landing {
+	background-image: url('../images/landing.jpg');
+	background-size: cover;
+	height: calc(100vh - 64px);
+	position: relative;
+}
+
+.landing .text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 320px;
+	text-align: center;
+}
+
+.landing .text h1 {
+	color: var(--main-color);
+	font-size: 50px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.landing .text p {
+	font-size: 19px;
+	line-height: var(--paragraph-line-height);
+}
+/* End landing */
