@@ -1,0 +1,141 @@
+/* Start variables */
+:root {
+	--main-duration: .5s;
+}
+/* End variables */
+
+/* Start global rules */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End global rules */
+
+/* Start header */
+header {
+	padding: 20px;
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .container img {
+	width: 60px;
+}
+
+header .container nav {
+	position: relative;
+	cursor: pointer;
+}
+
+header .container nav .bars {
+	width: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+header .container nav .bars div {
+	background-color: #333;
+	height: 2px;
+}
+
+header .container nav .bars div:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+header .container nav .bars div:not(:nth-child(2)) {
+	width: 100%
+}
+
+header .container nav .bars div:nth-of-type(2) {
+	transition: var(--main-duration);
+	width: 60%;
+}
+
+header .container nav:hover div:nth-of-type(2) {
+	width: 100% !important;
+}
+
+header .container nav ul::before {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(calc(50% - 30px / 2), -100%);
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #f6f6f6;
+}
+
+header .container nav ul {
+	display: none;
+	background-color: #f6f6f6;
+	list-style-type: none;
+	width: 200px;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: calc(100% + 15px);
+}
+
+header .container nav ul li {}
+
+header .container nav ul li a {
+	color: #333;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	transition: var(--main-duration);
+}
+
+header .container nav ul li a:hover {
+	padding-left: 25px;
+}
+
+header .container nav ul li:not(:last-child) a { 
+	border-bottom: 1px solid #ddd;
+}
+/* End header */
