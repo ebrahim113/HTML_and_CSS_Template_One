@@ -2,6 +2,10 @@
 :root {
 	--main-color: #10cab7;
 	--main-duration: .5s;
+	--section-padding: 60px;
+	--section-background-color: #f6f6f6;
+	--main-gap: 20px;
+	--paragraph-color: #777;
 	--paragraph-line-height: 1.8;
 }
 /* End variables */
@@ -172,3 +176,35 @@ header .container nav ul li:not(:last-child) a {
 	line-height: var(--paragraph-line-height);
 }
 /* End landing */
+
+/* Start features */
+.features {
+	background-color: var(--section-background-color);
+	padding: var(--section-padding) 0;
+}
+
+.features .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: var(--main-gap);
+}
+
+.features .container .feature {
+	text-align: center;
+}
+
+.features .container .feature i {
+	color: var(--main-color);
+}
+
+.features .container .feature h3 {
+	font-weight: 800;
+	margin: 30px 0;
+}
+
+.features .container .feature p {
+	font-size: 17px;
+	color: var(--paragraph-color);
+	line-height: var(--paragraph-line-height);
+}
+/* End features */
