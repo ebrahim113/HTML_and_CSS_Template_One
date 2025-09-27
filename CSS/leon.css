@@ -5,10 +5,10 @@
 	--main-duration: .5s;
 	--section-padding: 60px;
 	--section-background-color: #f6f6f6;
-	--section-top-margin: 100px;
+	--section-top-margin: 90px;
 	--main-gap: 25px;
 	--paragraph-color: #777;
-	--paragraph-line-height: 1.7;
+	--paragraph-line-height: 1.8;
 }
 /* End variables */
 
@@ -345,3 +345,92 @@ header .container nav ul li:not(:last-child) a {
 	margin-bottom: 0;
 }
 /* End portfolio */
+
+/* Start about */
+.about {
+	padding: var(--section-padding) 0 calc(var(--section-padding) + 60px);
+}
+
+.about .container .about-container {
+	margin-top: var(--section-top-margin);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+	.about .container .about-container 	{
+		text-align: center;
+		flex-direction: column;
+	}
+}
+
+.about .container .about-container .image::before {
+	content: "";
+	background-color: #ebeced;
+	position: absolute;
+	top: 50%;
+	left: -20px;
+	z-index: -1;
+	transform: translateY(-50%);
+	width: 100px;
+	height: calc(100% + 80px);
+}
+
+.about .container .about-container .image {
+	position: relative;
+	width: 250px;
+	height: 375px;
+}
+
+@media (max-width: 991px) {
+	.about .container .about-container .image {
+		margin: 0 auto 60px;
+	}
+}
+
+.about .container .about-container .image::after {
+	content: "";
+	position: absolute;
+	top: -40px;
+	right: 0;
+	z-index: -1;
+	transform: translateX(75%);
+	width: 120px;
+	height: 300px;
+	border-left: 80px solid var(--main-color);
+	border-bottom: 80px solid var(--main-color);
+}
+
+@media (max-width: 991px) {
+	.about .container .about-container .image::before,
+	.about .container .about-container .image::after {
+		display: none;
+	}
+}
+
+.about .container .about-container .image img {
+	max-width: 100%;
+}
+
+.about .container .about-container .text {
+	flex-basis: calc(100% - 500px);
+}
+
+.about .container .about-container .text p:first-of-type {
+	font-weight: bold;
+	line-height: var(--paragraph-line-height);
+	margin-bottom: 50px;
+}
+
+.about .container .about-container .text hr {
+	width: 50%;
+	display: inline-block;
+	border-color: var(--main-color);
+}
+
+.about .container .about-container .text p:last-of-type {
+	color: var(--paragraph-color);
+	line-height: var(--paragraph-line-height);
+}
+/* End about */
