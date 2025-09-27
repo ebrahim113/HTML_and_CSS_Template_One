@@ -6,6 +6,8 @@ const menu = nav.querySelector('ul');
 
 const middleBar = bars.querySelector(':nth-child(2)');
 
+document.querySelector('footer span:nth-of-type(1)').textContent = new Date().getFullYear();
+
 let isOpened = false;
 
 nav.addEventListener('click', (e) => {

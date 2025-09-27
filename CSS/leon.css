@@ -485,3 +485,18 @@ header .container nav ul li:not(:last-child) a {
 	margin-left: 10px;
 }
 /* End contact */
+
+/* Start footer */
+footer {
+	background-color: var(--secondary-color);
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	padding: 30px 10px;
+}
+
+footer span:nth-of-type(2) {
+	color: var(--main-color);
+	font-weight: bold;
+}
+/* End footer */
