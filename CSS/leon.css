@@ -1,12 +1,14 @@
 /* Start variables */
 :root {
 	--main-color: #10cab7;
+	--secondary-color: #2c4755;
 	--main-duration: .5s;
 	--section-padding: 60px;
 	--section-background-color: #f6f6f6;
+	--section-top-margin: 100px;
 	--main-gap: 20px;
 	--paragraph-color: #777;
-	--paragraph-line-height: 1.8;
+	--paragraph-line-height: 1.7;
 }
 /* End variables */
 
@@ -49,6 +51,34 @@ body {
   .container {
     width: 1170px;
   }
+}
+
+.special-heading {
+	color: #ebeced;
+	font-size: 100px;
+	font-weight: 800;
+	text-align: center;
+	letter-spacing: -3px;
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+	.special-heading {
+		font-size: 60px;
+	}
+}
+
+.special-heading+p {
+	color: #797979;
+	font-size: 20px;
+	text-align: center;
+	margin: -30px 0 0;
+}
+
+@media (max-width: 767px) {
+	.special-heading+p  {
+		margin-top: -20px;
+	}
 }
 /* End global rules */
 
@@ -208,3 +238,74 @@ header .container nav ul li:not(:last-child) a {
 	line-height: var(--paragraph-line-height);
 }
 /* End features */
+
+/* Start services */
+.services {
+	padding: var(--section-padding) 0;
+}
+
+.services .container .services-container {
+	margin-top: var(--section-top-margin);
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: var(--main-gap);
+}
+
+.services .container .services-container .services-column .image::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	z-index: -1;
+	transform: translateY(-50%);
+	background-color: var(--secondary-color);
+	width: 100px;
+	height: calc(100% + 100px);
+}
+
+.services .container .services-container .services-column .image {
+	text-align: center;
+	position: relative;
+}
+
+@media (max-width: 1199px) {
+	.services .container .services-container .services-column .image {
+		display: none;
+	}
+}
+
+.services .container .services-container .services-column .image img {
+	width: 260px;
+}
+
+.services .container .services-container .services-column .service {
+	display: flex;
+	margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+	.services .container .services-container .services-column .service {
+		text-align: center;
+		flex-direction: column;
+	}
+}
+
+.services .container .services-container .services-column .service i {
+	color: var(--main-color);
+	flex-basis: 60px;
+}
+
+.services .container .services-container .services-column .service .text {
+	flex: 1;
+}
+
+.services .container .services-container .services-column .service .text h3 {
+	margin: 0 0 20px;
+}
+
+.services .container .services-container .services-column .service .text p {
+	color: #444;
+	font-weight: 300;
+	line-height: var(--paragraph-line-height);
+}
+/* End services */
