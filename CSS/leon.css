@@ -6,7 +6,7 @@
 	--section-padding: 60px;
 	--section-background-color: #f6f6f6;
 	--section-top-margin: 100px;
-	--main-gap: 20px;
+	--main-gap: 25px;
 	--paragraph-color: #777;
 	--paragraph-line-height: 1.7;
 }
@@ -309,3 +309,39 @@ header .container nav ul li:not(:last-child) a {
 	line-height: var(--paragraph-line-height);
 }
 /* End services */
+
+/* Start portfolio */
+.portfolio {
+	background-color: var(--section-background-color);
+	padding: var(--section-padding) 0;
+}
+
+.portfolio .container .portfolio-container {
+	margin-top: var(--section-top-margin);
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: var(--main-gap);
+}
+
+.portfolio .container .portfolio-container .project {
+	background-color: #fff;
+}
+
+.portfolio .container .portfolio-container .project img {
+	max-width: 100%
+}
+
+.portfolio .container .portfolio-container .project .info {
+	padding: 20px;
+}
+
+.portfolio .container .portfolio-container .project .info h3 {
+	margin: 0;
+}
+
+.portfolio .container .portfolio-container .project .info p {
+	color: var(--paragraph-color);
+	line-height: var(--paragraph-line-height);
+	margin-bottom: 0;
+}
+/* End portfolio */
