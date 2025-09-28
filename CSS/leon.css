@@ -177,12 +177,16 @@ header .container nav ul li:not(:last-child) a {
 }
 /* End header */
 
-/* Start landing */
+/* Start home styles */
+/* Start home landing */
 .landing {
-	background-image: url('../images/landing.jpg');
 	background-size: cover;
 	height: calc(100vh - 64px);
 	position: relative;
+}
+
+.landing.home {
+	background-image: url('../images/home-landing.jpg');
 }
 
 .landing .text {
@@ -190,6 +194,9 @@ header .container nav ul li:not(:last-child) a {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.landing.home .text {
 	width: 320px;
 	text-align: center;
 }
@@ -201,11 +208,11 @@ header .container nav ul li:not(:last-child) a {
 	margin: 0;
 }
 
-.landing .text p {
+.landing.home .text p {
 	font-size: 19px;
 	line-height: var(--paragraph-line-height);
 }
-/* End landing */
+/* End home landing */
 
 /* Start features */
 .features {
@@ -500,3 +507,185 @@ footer span:nth-of-type(2) {
 	font-weight: bold;
 }
 /* End footer */
+/* End home styles */
+
+/* Start branding styles */
+header.branding {
+	background-color: #f6f6f6;
+}
+
+
+/* Start branding landing */
+.landing.branding {
+	background-image: url('../images/branding-landing.jpg');
+}
+
+.landing.branding .container {
+	background-color: #fff;
+	padding: 20px 80px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+	.landing.branding .container {
+		padding: 20px;
+	}
+}
+
+.landing.branding .container h3 {
+	color: #333;
+	font-size: 25px;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+	.landing.branding .container h3 {
+		font-size: 15px;
+	}
+}
+
+.landing.branding .container p {
+	color: var(--main-color);
+	font-weight: 800;
+	font-size: 50px;
+	margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+	.landing.branding .container p {
+		font-size: 20px;
+	}
+}
+/* End branding landing */
+
+/* Start project */
+.project {
+	padding: var(--section-padding) 0;
+}
+
+.project .container {}
+
+.project .container .info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+	.project .container .info {
+		flex-direction: column-reverse;
+		align-items: stretch;
+	}
+}
+
+.project .container .info .text {
+	flex-basis: 46%;
+}
+
+@media (max-width: 767px) {
+	.project .container .info .text {
+		text-align: center;
+	}
+}
+
+.project .container .info .text p:first-of-type 
+{
+	font-weight: bold;
+	line-height: var(--paragraph-line-height);
+	margin-bottom: 50px;
+}
+
+.project .container .info .text hr {
+	width: 50%;
+	display: inline-block;
+	border-color: var(--main-color);
+}
+
+.project .container .info .text p:last-of-type {
+	font-size: 13px;
+	color: var(--paragraph-color);
+	line-height: var(--paragraph-line-height);
+}
+
+.project .container .info .details {
+	padding: 20px 40px;
+	flex-basis: 25%;
+    box-shadow: 7px 7px 20px 0px #ddd;
+}
+
+@media (max-width: 767px) {
+	.project .container .info .details {
+		margin-bottom: 20px;
+	}
+}
+
+.project .container .info .details div {
+	margin-bottom: 50px;
+}
+
+.project .container .info .details div h3  {
+	font-size: 18px;
+	font-weight: 800;
+}
+
+.project .container .info .details div p  {
+	color: var(--paragraph-color);
+}
+
+.project .container .main {
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+	.project .container .main {
+		margin-bottom: 70px;
+	}
+}
+
+.project .container .gallery {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: var(--main-gap);
+}
+
+.project .container .gallery .box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media (max-width: 767px) {
+	.project .container .gallery .box:first-of-type {
+		flex-direction: column-reverse;
+	}
+	
+	.project .container .gallery .box:last-of-type {
+		flex-direction: column;
+	}
+}
+
+.project .container .gallery .box p {
+	color: var(--paragraph-color);
+	line-height: var(--paragraph-line-height);
+	flex-basis: 48%;
+	padding: 20px;
+}
+
+.project .container .gallery .box img {
+	max-width: 48%;
+}
+
+@media (max-width: 767px) {
+	.project .container .gallery .box img {
+		max-width: 100%;
+	}
+}
+/* End project */
+/* End branding styles */
